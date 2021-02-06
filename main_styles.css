@@ -1,0 +1,82 @@
+*{
+    padding : 0;
+    margin : 0;
+    box-sizing : border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+html,body{
+    background-color: #e2f3f5;
+    height : 100%;
+}
+
+.main-container{
+    width : 100%;
+    height : 50%;
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%,-50%);
+    padding : 25px 15px;
+}
+
+.main-container .heading {
+    padding : 5px 5px 75px;
+}
+
+.main-container .heading h1{
+    text-align : center;
+    font-size : 1.5rem;
+    color : rgb(66, 66, 66);
+    font-weight: bold;
+}
+
+.container-body{
+    display :flex;
+    justify-content: space-between;
+}
+
+.container-body button{
+    align-self: center;
+    padding : 8px;
+    border : none;
+    outline : none;
+    font-size : 1.5rem;
+    background-color : transparent;
+    cursor: pointer;
+    color : rgb(73, 73, 73)
+}
+
+.container-body button .fa{
+    pointer-events: none;
+}
+
+.container-body .testimonial{
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    padding : 15px;
+    border : 2px solid teal;
+    flex : 0.95;
+    border-radius: 8px;
+}
+
+.container-body .testimonial img{
+    width : 100px;
+    height : 100px;
+    border-radius : 50%;
+    position: relative;
+    top : -65px;
+    border : 2px solid teal;
+}
+
+.container-body .testimonial h3{
+    font-size : 1rem;
+    padding : 0px 0px 8px;
+}
+
+.container-body .testimonial p{
+    text-align : center;
+}
+
+
