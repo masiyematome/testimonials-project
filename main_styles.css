@@ -69,6 +69,12 @@ html,body{
     align-items: center;
     border : 2px solid teal;
     border-radius: 8px;
+    opacity : 0;
+    transition : all ease 0.5s;
+}
+
+.test.showing {
+    opacity : 1;
 }
 
 .test img{
