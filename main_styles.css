@@ -63,7 +63,6 @@ html,body{
 }
 
 .test {
-    position : absolute;
     top : 0;
     left : 0;
     padding : 15px 8px;
@@ -72,13 +71,8 @@ html,body{
     align-items: center;
     border : 2px solid teal;
     border-radius: 8px;
-    opacity : 0;
     transition : all ease 0.5s;
     width : 100%;
-}
-
-.test.showing {
-    opacity : 1;
 }
 
 .test img{
