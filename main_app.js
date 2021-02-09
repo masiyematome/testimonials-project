@@ -5,6 +5,7 @@ const nextTestimonial = document.querySelector(".next-testimonial");
 const userName = document.querySelector(".user-name");
 const userImage = document.querySelector(".user-image");
 const userTestimony = document.querySelector(".user-testimony");
+const containerBody = document.querySelector(".container-body");
 
 let currentTestimonyIndex = 0;
 
@@ -23,31 +24,34 @@ function printTestimonials(arrayOfTestimonials){
 
     assignValuesToElements(arrayOfTestimonials);
 
-    previousTestimonial.addEventListener("click" , () => {
-        if(currentTestimonyIndex == 0){
-            currentTestimonyIndex = arrayOfTestimonials.length-1;
+    containerBody.addEventListener("click" , (event) => {
+        const clickedItem = event.target;
+
+        if(clickedItem.className = "previousTestimonial"){
+            if(currentTestimonyIndex == 0){
+                currentTestimonyIndex = arrayOfTestimonials.length-1;
+            }
+
+            else{
+                currentTestimonyIndex = currentTestimonyIndex - 1;
+            }
+
+            assignValuesToElements(arrayOfTestimonials);
         }
 
-        else{
-            currentTestimonyIndex = currentTestimonyIndex - 1;
-        }
+        else if(clickedItem.className = "nextTestimonial"){
+            if(currentTestimonyIndex == arrayOfTestimonials.length-1){
+                currentTestimonyIndex = 0;
+            }
 
-        assignValuesToElements(arrayOfTestimonials);
+            else{
+                currentTestimonyIndex = currentTestimonyIndex + 1;
+            }
+
+            assignValuesToElements(arrayOfTestimonials);
+        }
 
     });
-
-    nextTestimonial.addEventListener("click",()=> {
-        if(currentTestimonyIndex == arrayOfTestimonials.length-1){
-            currentTestimonyIndex = 0;
-        }
-
-        else{
-            currentTestimonyIndex = currentTestimonyIndex + 1;
-        }
-
-        assignValuesToElements(arrayOfTestimonials);
-        
-    })
     
 }
 
