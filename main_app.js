@@ -35,6 +35,19 @@ function printTestimonials(arrayOfTestimonials){
         assignValuesToElements(arrayOfTestimonials);
 
     });
+
+    nextTestimonial.addEventListener("click",()=> {
+        if(currentTestimonyIndex == arrayOfTestimonials.length-1){
+            currentTestimonyIndex = 0;
+        }
+
+        else{
+            currentTestimonyIndex = currentTestimonyIndex + 1;
+        }
+
+        assignValuesToElements(arrayOfTestimonials);
+        
+    })
     
 }
 
